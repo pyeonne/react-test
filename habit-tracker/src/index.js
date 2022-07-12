@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
 import "@fortawesome/fontawesome-free/js/all.js";
-import HabitPresenter from "./habit_presenter";
+import HabitPresenter from "./habit_presenter.js";
 
 const habitPresenter = new HabitPresenter([
   { id: 1, name: "Reading", count: 0 },
