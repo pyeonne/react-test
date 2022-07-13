@@ -2,7 +2,7 @@ import React from "react";
 import { screen, render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import renderer from "react-test-renderer";
-import HabitAddForm from "../../habitAddForm";
+import HabitAddForm from "../habitAddForm";
 
 describe("HabitAddForm", () => {
   it("renders", () => {
