@@ -1,5 +1,8 @@
 import React from "react";
 import renderer from "react-test-renderer";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
+
 import Habit from "../habit";
 
 describe("Habit component", () => {
@@ -37,6 +40,18 @@ describe("Habit component", () => {
       const button = screen.getByTitle("increase");
       userEvent.click(button);
       expect(onIncrement).toHaveBeenCalledWith(habit);
+    });
+
+    it('calls onDecrement when clicking "decrement" button', () => {
+      const button = screen.getByTitle("decrease");
+      userEvent.click(button);
+      expect(onDecrement).toHaveBeenCalledWith(habit);
+    });
+
+    it('calls onDelete when clicking "delete" button', () => {
+      const button = screen.getByTitle("delete");
+      userEvent.click(button);
+      expect(onDelete).toHaveBeenCalledWith(habit);
     });
   });
 });
